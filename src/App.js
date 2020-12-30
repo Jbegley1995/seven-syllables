@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Logo from './components/shared/Logo'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <style type="text/css">
+        {`
+        .bg-primary {
+          background-color: #481919 !important;
+        }
+        .bg-secondary {
+          background-color: #e2e28a !important;
+        }
+        `}
+      </style>
+      <Router>
+        <Navbar bg="primary" variant="dark" fixed="top" className="pl-4 pr-4">
+          <Navbar.Brand href="/">
+            <Logo></Logo>
+          </Navbar.Brand>
+          <Nav className="ml-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="#home">Work</Nav.Link>
+            <Nav.Link href="#home">Blog</Nav.Link>
+            <Nav.Link href="/about">A<span className="syllable small"></span>bout</Nav.Link>
+            <Nav.Link href="#features">Con<span className="syllable small"></span>tact</Nav.Link>
+          </Nav>
+        </Navbar>
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/about' component={About} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 

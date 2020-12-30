@@ -1,0 +1,20 @@
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dot:first-child, .dot:nth-child(4) {
+    margin-right: 25px;
+}
+
+.dot:nth-child(2) {
+    margin-right: 40px;
+}
+
+/** primary : #481919 */
+
+/** secondary : #e2e28a */
