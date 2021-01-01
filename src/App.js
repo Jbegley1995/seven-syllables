@@ -1,10 +1,11 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
-import Home from './components/pages/Home';
+import Home from './components/pages/home/Home';
 import About from './components/pages/About';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Logo from './components/shared/Logo'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -13,6 +14,23 @@ function App() {
         {`
         .bg-primary {
           background-color: #481919 !important;
+        }
+        .btn-outline-primary{
+          border-color: #481919 !important;
+          color: #481919 !important;
+        }
+        .btn-outline-primary:hover{
+          color: #fff !important;
+          background-color: #481919;
+          border-color: #481919;
+        }
+        .btn-outline-primary.focus, .btn-outline-primary:focus {
+          box-shadow: 0 0 0 0.2rem rgb(72 25 25);
+        }
+        .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+          color: #fff !important;
+          background-color: #481919;
+          border-color: #481919;
         }
         .bg-secondary {
           background-color: #e2e28a !important;
@@ -36,6 +54,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/about' component={About} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );
