@@ -5,7 +5,7 @@ import './HeroSection.css';
 class HeroSection extends React.Component {
   render() {
     return (
-      <div className={`hero-container ${this.props.className}`} >
+      <div id={this.props.id} className={`hero-container ${this.props.className}`} >
           {this.props.children}
       </div>
     )

@@ -53,11 +53,11 @@ function App() {
           </Nav>
           <Nav className="ml-auto">
             <Nav.Link href="#home">Blog</Nav.Link>
+            <Nav.Link href="#shop">Shop</Nav.Link>
           </Nav>
         </Navbar>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/about' component={About} />
         </Switch>
         <Footer />
       </Router>

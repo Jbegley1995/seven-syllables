@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../App.css';
-import Cards from '../../Cards';
 import HeroSection from '../../HeroSection';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 function Home() {
   return (
@@ -9,7 +9,7 @@ function Home() {
       <HeroSection>
         <video src='/videos/video-1.mp4' autoPlay loop muted />
         <div className="syllable-hero-row">
-          <a href="#vacation"><span class="syllable" style={{marginRight: '5em'}}></span></a>
+          <a href="#about-section"><span class="syllable" style={{marginRight: '5em'}}></span></a>
           <span class="syllable" style={{marginRight: '10em'}}></span>
           <span class="syllable"></span>
           <span class="syllable" style={{marginRight: '5em'}}></span>
@@ -21,9 +21,9 @@ function Home() {
           </div>
         </div>
       </HeroSection>
-      <HeroSection className="bg-white">
-        <ScrollAnimation animateIn='bounceInRight'
-          animateOut='bounceOutLeft'>
+      <HeroSection id="about-section" className="bg-white">
+        <ScrollAnimation animateIn='fadeInRight'
+          animateOut='fadeOutRight'>
           <h2>
             <a href='https://daneden.github.io/animate.css/'>
               Animate.css
