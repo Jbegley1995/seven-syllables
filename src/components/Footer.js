@@ -2,6 +2,8 @@ import React from 'react';
 import './Footer.css';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons' 
 
 function Footer() {
   return (
@@ -41,9 +43,8 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
             <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
+            <Link to='/'>Instagram</Link>
             <Link to='/'>Twitter</Link>
           </div>
         </div>
@@ -58,46 +59,9 @@ function Footer() {
           </div>
           <small class='website-rights'>Se7en Syllables © 2020</small>
           <div class='social-icons'>
-            <Link
-              class='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
-              class='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i class='fab fa-instagram' />
-            </Link>
-            <Link
-              class='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i class='fab fa-youtube' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin' />
-            </Link>
+            <Link to='/'><FontAwesomeIcon icon={faFacebook} className="text-white" /></Link>
+            <Link to='/'><FontAwesomeIcon icon={faInstagram} className="text-white" /></Link>
+            <Link to='/'><FontAwesomeIcon icon={faTwitter} className="text-white" /></Link>
           </div>
         </div>
       </section>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Home from './components/pages/home/Home';
-import About from './components/pages/About';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Logo from './components/shared/Logo'
 import Footer from './components/Footer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   return (
@@ -54,6 +54,7 @@ function App() {
           <Nav className="ml-auto">
             <Nav.Link href="#home">Blog</Nav.Link>
             <Nav.Link href="#shop">Shop</Nav.Link>
+            <Nav.Link href="#cart"><FontAwesomeIcon icon={faShoppingCart} /></Nav.Link>
           </Nav>
         </Navbar>
         <Switch>
