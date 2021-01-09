@@ -49,9 +49,13 @@
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
-  height: 2rem;
-  width: 2rem;
+  height: 5rem;
+  width: 5rem;
   position: relative;
+}
+
+.syllable.hover{
+  border-width: 10px;
 }
 
 

@@ -38,16 +38,21 @@ function App() {
         `}
       </style>
       <Router>
-        <Navbar bg="primary" variant="dark" fixed="top" className="pl-4 pr-4">
-          <Navbar.Brand href="/">
-            <Logo></Logo>
-          </Navbar.Brand>
-          <Nav className="ml-auto">
+        <Navbar bg="dark" variant="dark" fixed="top" className="pl-4 pr-4">
+          <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#home">Work</Nav.Link>
+          </Nav>
+          <Nav className="m-auto">
+            <img
+              alt=""
+              src="images/company-logo.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />
+          </Nav>
+          <Nav className="ml-auto">
             <Nav.Link href="#home">Blog</Nav.Link>
-            <Nav.Link href="/about">A<span className="syllable small"></span>bout</Nav.Link>
-            <Nav.Link href="#features">Con<span className="syllable small"></span>tact</Nav.Link>
           </Nav>
         </Navbar>
         <Switch>

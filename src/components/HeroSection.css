@@ -1,81 +1,11 @@
-  .letter {
-    color: #40404017;
-    position: absolute;
-    font-weight: bold;
-    font-size: 6rem;
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
   }
 
-  .letter.complete {
-    color: #404040;
-    position: unset;
-    transform: unset;
-  }
-
-  .letter.letter-i{
-    bottom: 0;
-    left: 115px;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-n{
-    top: 55px;
-    left: 30%;
-    transform: rotate(45deg);
-  }
-  .letter.letter-d{
-    bottom: 25px;
-    right: 25%;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-i-second{
-    bottom: 50%;
-    right: 5%;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-v{
-    bottom: 30%;
-    left: 15%;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-i-third{
-    top: 100px;
-    right: 50%;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-d-second{
-    top: 115px;
-    right: 15%;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-u{
-    top: 115px;
-    left: 5%;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-a{
-    bottom: 0;
-    right: 115px;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-l{
-    top: 150px;
-    left: 25%;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-i-fourth{
-    bottom: 25%;
-    right: 115px;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-t{
-    bottom: 15%;
-    transform: rotate(-45deg);
-  }
-  .letter.letter-y{
-    bottom: 15%;
-    left: 250px;
-    transform: rotate(-45deg);
-  }
-  
   .hero-container {
     height: 100vh;
     width: 100%;
@@ -83,29 +13,41 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
-    background-color: #f1f1e0;
   }
 
-  .hero-container h2 {
-    color: #404040;
+  .syllable-hero-row {
+    position: absolute;
+    left: 0;
+    top: 35vh;
+    right: 0;
+    bottom: 0;
+    text-align: center;
   }
 
-  .hero-btns {
-    margin-top: 32px;
+  .syllable-hero-row .syllable {
+    mix-blend-mode: difference;
+    z-index: -1;
+    transition: all 0.1s;
   }
-  
-  .hero-btns .btn {
-    margin: 6px;
+
+  .hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: -100px;
   }
-  
-  .fa-play-circle {
-    margin-left: 4px;
+
+  .hero-btn-row button {
+    font-weight: bold;
   }
 
   .syllable:hover{
-    background-color: #e2e28a !important;
+    /* background-image: url("./Logos/IMG_4462.JPG") !important; */
     cursor: pointer;
+    border: 5px solid #6b6b6b82;
+    /* mix-blend-mode: unset; */
+    background-size: 100%;
   }
   
   @media screen and (max-width: 960px) {
